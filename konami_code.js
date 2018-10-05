@@ -1,7 +1,7 @@
 const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 
 function init() {
-  document.body.addEventListener("keydown", onKeyDownHandler)
+  document.body.addEventListener("keydown", onKeyDownHandler);
   
   // Keep track of index outside of the event handler.
   let index = 0;
@@ -10,10 +10,10 @@ function init() {
   function onKeyDownHandler(e) {
     const key = parseInt(e.detail || e.which);
    
-    if (key === alphabet[index]) {
+    if (key === code[index]) {
       index++;
-   
-      if (index === alphabet.length) {
+      console.log(key);
+      if (index === code.length) {
         alert("Hurray!");
    
         index = 0;
